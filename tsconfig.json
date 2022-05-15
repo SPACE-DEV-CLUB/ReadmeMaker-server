@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2020", // ECMAScript 버전 선택 ES6 이상 쓰는 것을 권장
+    "module": "commonjs", // 모듈을 위한
+    "outDir": "./dist", // 컴파일 후 디렉토리
+    "rootDir": "./src", // 루트 디렉토리
+    "strict": true, // 타입체킹 활성화 -> 타입스크립트 쓰는 이유
+    "moduleResolution": "node", // 모듈 해석 방법
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
