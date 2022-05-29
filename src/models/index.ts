@@ -1,10 +1,14 @@
 import { Sequelize } from "sequelize";
-import config from "../config/config";
-
-const sequelzie = new Sequelize(config.DB, config.USER, config.PASSWORD, {
-  host: config.HOST,
+var path = require('path');
+var env = process.env.NODE_ENV || 'development';
+var config = require(path.join(__dirname, '..', 'config', 'config.js'))[env];
+const sequelize = new Sequelize({
+  password: config.password,
+  username: config.username,
+  database: config.database,
+  host: config.host,
   dialect: "mysql",
   timezone: "+09:00",
 });
 
-export default sequelzie;
+export default sequelize;

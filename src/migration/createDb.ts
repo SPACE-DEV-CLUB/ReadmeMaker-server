@@ -26,7 +26,7 @@ let migrationAllTable = async () => {
         console.log("Migration File Name : ", el);
 
         const { stdout, stderr } = await asyncExec(
-          `yarn ts-node "./src/migration/createTable/${el}"`
+          `ts-node "./src/migration/createTable/${el}"`
         );
         if (stdout) console.log(stdout);
         if (stderr) console.error("Std Err : ", stderr);
