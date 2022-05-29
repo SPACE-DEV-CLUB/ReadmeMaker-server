@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2020", // ECMAScript 버전 선택 ES6 이상 쓰는 것을 권장
+    "target": "ESNext", // ECMAScript 버전 선택 ES6 이상 쓰는 것을 권장
     "module": "commonjs", // 모듈을 위한
     "outDir": "./dist", // 컴파일 후 디렉토리
     "rootDir": "./src", // 루트 디렉토리
