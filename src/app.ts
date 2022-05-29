@@ -7,10 +7,7 @@ dotenv.config();
 const app = express();
 const port = process.env.SERVER_PORT;
 
-app.get("/", (req: Request, res: Response, next: NextFunction) => {
-  res.send("Hello, world!");
-});
-
+require("./router/component.routes")(app);
 app.listen(port, async () => {
   console.log(`http sever on ${port}`);
 

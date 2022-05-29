@@ -8,6 +8,7 @@
     "moduleResolution": "node", // 모듈 해석 방법
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "noImplicitAny": false,
     "forceConsistentCasingInFileNames": true
   }
 }
