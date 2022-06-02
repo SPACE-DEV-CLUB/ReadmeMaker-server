@@ -8,5 +8,21 @@ const development = {
   host: env.MYSQL_HOST,
   dialect: "mysql",
 };
+const production = {
+  username: env.MYSQL_USER,
+  password: env.MYSQL_PASSWORD,
+  database: env.MYSQL_DB,
+  host: env.MYSQL_HOST,
+  dialect: "mysql",
+};
+const test = {
+  username: env.MYSQL_USER,
+  password: env.MYSQL_PASSWORD,
+  database: env.MYSQL_DB,
+  host: env.MYSQL_HOST,
+  dialect: "mysql",
+};
 
-module.exports = { development };
+
+
+module.exports = { development, production, test };
