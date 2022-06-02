@@ -6,7 +6,7 @@ module.exports = {
       "components",
       [
         {
-          id: 2,
+          id: 3,
           title: "백준 티어_1",
           author: "mori8",
           description: "만약 로드된 후 애니메이션을 다시 보고싶으시면 ctrl + shift + R 을 눌러서 강력 새로고침을 하시면 다시 보실 수 있습니다!",
@@ -17,23 +17,24 @@ module.exports = {
           link: "https://github.com/mazassumnida/mazassumnida/blob/master/README.md",
           like: 5,
           new: 2,
-          expired: 0        }
-      ]
-    )
-  },
-  up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert(
-      "component_tags",
-      [
-        {
-          id: 2,
-          title: "백준 티어_1",
-          description: "만약 로드된 후 애니메이션을 다시 보고싶으시면 ctrl + shift + R 을 눌러서 강력 새로고침을 하시면 다시 보실 수 있습니다!",
-          component_id: 1
+          expired: 0
         }
       ]
     )
   },
+  // up: async (queryInterface, Sequelize) => {
+  //   await queryInterface.bulkInsert(
+  //     "componenttags",
+  //     [
+  //       {
+  //         id: 3,
+  //         title: "백준 티어_1",
+  //         description: "만약 로드된 후 애니메이션을 다시 보고싶으시면 ctrl + shift + R 을 눌러서 강력 새로고침을 하시면 다시 보실 수 있습니다!",
+  //         component_id: 1
+  //       }
+  //     ]
+  //   )
+  // },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.bulkDelete("components", null, {});
   },
