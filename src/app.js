@@ -31,6 +31,8 @@ app.get('/', (req, res) => {
 
 app.use((err, req, res, next) => {
 })
+app.use('/component', require('./routes/component'))
+app.use('/component_tags', require('./routes/componentTags'))
 
 app.listen(3065, () => {
   console.log("서버 실행중");
