@@ -12,11 +12,6 @@ const sequelize = new Sequelize({
   database: config.database,
   host: config.host,
   dialect: "mysql",
-  dialectOptions: {
-    options: {
-      requestTimeout: 30000
-    }
-  },
   pool: {
     max: 15,
     min: 5,
