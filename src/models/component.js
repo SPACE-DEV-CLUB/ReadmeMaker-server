@@ -44,15 +44,6 @@ module.exports = class Component extends Model {
       like: {
         type: DataTypes.INTEGER,
       },
-      new: {
-        type: DataTypes.INTEGER,
-      },
-      expired: {
-        type: DataTypes.BOOLEAN,
-        validate: {
-          notEmpty: true,
-        },
-      },
     }, {
       modelName: 'Component',
       tableName: 'components',

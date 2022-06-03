@@ -17,24 +17,103 @@ module.exports = {
           link: "https://github.com/mazassumnida/mazassumnida/blob/master/README.md",
           like: 5,
           new: 2,
-          expired: 0
         }
       ]
     )
   },
   // up: async (queryInterface, Sequelize) => {
   //   await queryInterface.bulkInsert(
-  //     "componenttags",
+  //     "component_tags",
   //     [
   //       {
-  //         id: 3,
-  //         title: "백준 티어_1",
-  //         description: "만약 로드된 후 애니메이션을 다시 보고싶으시면 ctrl + shift + R 을 눌러서 강력 새로고침을 하시면 다시 보실 수 있습니다!",
-  //         component_id: 1
+  //         title: "New"
+  //       },
+  //       {
+  //         title: "Rank"
+  //       },
+  //       {
+  //         title: "Typo"
+  //       },
+  //       {
+  //         title: "Graph"
+  //       },
+  //       {
+  //         title: "Badge"
+  //       },
+  //     ]
+  //   )
+  // },
+  // up: async (queryInterface, Sequelize) => {
+  //   await queryInterface.bulkInsert(
+  //     "templates",
+  //     [
+  //       {
+  //         title: "Bakjoon Ranker",
+  //         author: "LEEHYUNHO2001",
+  //         description: "백준을 열심히 푸는 사람들을 위한 템플릿 입니다.",
+  //         image: "https://user-images.githubusercontent.com/47337588/171867122-83bbada0-d715-481d-9e5e-4d5fd6d4c8a4.png",
+  //         link: "https://github.com/jae04099",
+  //         like: 2,
   //       }
   //     ]
   //   )
   // },
+  // up: async (queryInterface, Sequelize) => {
+  //   await queryInterface.bulkInsert(
+  //     "template_tags",
+  //     [
+  //       {
+  //         title: "AllGithub"
+  //       },
+  //       {
+  //         title: "Actions"
+  //       },
+  //       {
+  //         title: "Game Mode"
+  //       },
+  //       {
+  //         title: "Code Mode"
+  //       },
+  //       {
+  //         title: "Dynamic"
+  //       },
+  //       {
+  //         title: "Realtime"
+  //       },
+  //       {
+  //         title: "Descriptive"
+  //       },
+  //       {
+  //         title: "Simple but Innovative Ones"
+  //       },
+  //       {
+  //         title: "Anime"
+  //       },
+  //       {
+  //         title: "Minimalistic"
+  //       },
+  //       {
+  //         title: "GIFS"
+  //       },
+  //       {
+  //         title: "Just Images"
+  //       },
+  //       {
+  //         title: "Badges"
+  //       },
+  //       {
+  //         title: "Fancy Fonts"
+  //       },
+  //       {
+  //         title: "Icons"
+  //       },
+  //       {
+  //         title: "Retro"
+  //       },
+  //     ]
+  //   )
+  // },
+
   down: async (queryInterface, Sequelize) => {
     await queryInterface.bulkDelete("components", null, {});
   },

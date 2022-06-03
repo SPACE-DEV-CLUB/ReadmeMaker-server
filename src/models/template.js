@@ -31,25 +31,13 @@ module.exports = class Template extends Model {
       },
       related_comp: {
         type: DataTypes.JSON,
-        validate: {
-          notEmpty: true,
-        },
       },
       tags: {
         type: DataTypes.JSON,
       },
       like: {
         type: DataTypes.INTEGER,
-      },
-      new: {
-        type: DataTypes.INTEGER,
-      },
-      expired: {
-        type: DataTypes.BOOLEAN,
-        validate: {
-          notEmpty: true,
-        },
-      },
+      }
     }, {
       modelName: 'Template',
       tableName: 'templates',
@@ -58,4 +46,8 @@ module.exports = class Template extends Model {
       sequelize,
     })
   }
+  // static associate(db) {
+  //   db.Template.hasMany(db.Component);
+  //   db.Component.belongsTo(db.Template);
+  // }
 }

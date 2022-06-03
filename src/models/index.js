@@ -3,6 +3,7 @@ var path = require('path');
 const component = require('./component');
 const componentTags = require('./componentTags');
 const template = require('./template');
+const templateTags = require('./templateTags');
 const db = {};
 var env = process.env.NODE_ENV || 'development';
 var config = require(path.join(__dirname, '..', 'config', 'config.js'))[env];
@@ -48,6 +49,7 @@ const sequelize = new Sequelize({
 db.Component = component;
 db.ComponentTags = componentTags;
 db.Template = template;
+db.TemplateTags = templateTags;
 
 Object.keys(db).forEach(modelName => {
   db[modelName].init(sequelize);

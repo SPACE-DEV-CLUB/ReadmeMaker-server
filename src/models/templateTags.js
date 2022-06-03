@@ -3,7 +3,7 @@ const { Model } = DataTypes;
 
 
 
-module.exports = class ComponentTags extends Model {
+module.exports = class TemplateTags extends Model {
   static init(sequelize) {
     return super.init({
       title: {
@@ -14,15 +14,15 @@ module.exports = class ComponentTags extends Model {
         },
       },
     }, {
-      modelName: 'ComponentTag',
-      tableName: 'component_tags',
+      modelName: 'TemplateTag',
+      tableName: 'template_tags',
       charset: 'utf8mb4', //한글 + 이모티콘
       collate: 'utf8mb4_general_ci',//한글 저장
       sequelize,
     })
   }
-  // static associate(db) {
-  //   db.ComponentTags.belongsTo(db.Component);
-  //   db.Component.hasMany(db.ComponentTags);
-  // }
+//   static associate(db) {
+//     db.TemplateTags.belongsTo(db.Template);
+//     db.Template.hasMany(db.TemplateTags);
+//   }
 }

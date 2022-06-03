@@ -33,6 +33,8 @@ app.use((err, req, res, next) => {
 })
 app.use('/component', require('./routes/component'))
 app.use('/component_tags', require('./routes/componentTags'))
+app.use('/template', require('./routes/template'))
+app.use('/template_tags', require('./routes/templateTags'))
 
 app.listen(3065, () => {
   console.log("서버 실행중");
