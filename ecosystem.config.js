@@ -7,10 +7,7 @@ module.exports = {
             exec_mode: 'cluster',
             merge_logs: true, 
             autorestart: true, 
-            watch: false, 
-            env: {
-                NODE_ENV: 'development',
-            },
+            watch: false
         },
     ]
 };
