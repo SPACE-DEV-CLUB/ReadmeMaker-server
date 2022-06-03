@@ -17,6 +17,13 @@ const sequelize = new Sequelize({
       requestTimeout: 30000
     }
   },
+  pool: {
+    max: 15,
+    min: 5,
+    idle: 20000,
+    evict: 15000,
+    acquire: 30000
+  },
   timezone: "+09:00",
 });
 
