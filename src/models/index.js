@@ -19,6 +19,9 @@ const sequelize = new Sequelize({
     evict: 15000,
     acquire: 30000
   },
+  dialectOptions: {
+    requestTimeout: 30000
+  },
   timezone: "+09:00",
 });
 
