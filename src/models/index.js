@@ -12,15 +12,15 @@ const sequelize = new Sequelize({
   database: config.database,
   host: config.host,
   dialect: "mysql",
+  dialectOptions: {
+    connectTimeout: 30000
+  },
   pool: {
     max: 15,
     min: 5,
     idle: 20000,
     evict: 15000,
     acquire: 30000
-  },
-  dialectOptions: {
-    requestTimeout: 30000
   },
   timezone: "+09:00",
 });
