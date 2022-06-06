@@ -46,8 +46,8 @@ module.exports = class Template extends Model {
       sequelize,
     })
   }
-  // static associate(db) {
-  //   db.Template.hasMany(db.Component);
-  //   db.Component.belongsTo(db.Template);
-  // }
+  static associate(db) {
+    db.Template.belongsToMany(db.TemplateTags, { through: 'Theme_Tag', foreignKey: "template_id" });
+    db.Template.hasMany(db.Component);
+  }
 }

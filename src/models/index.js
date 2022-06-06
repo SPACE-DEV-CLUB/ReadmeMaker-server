@@ -14,7 +14,7 @@ const sequelize = new Sequelize({
   host: config.host,
   dialect: "mysql",
   dialectOptions: {
-    connectTimeout: 30000
+    connectTimeout: 30000,
   },
   pool: {
     max: 15,

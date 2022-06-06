@@ -7,6 +7,14 @@ const development = {
   database: env.MYSQL_DB,
   host: env.MYSQL_HOST,
   dialect: "mysql",
+  timezone: "+09:00",
+  dialectOptions: {
+    dateStrings: true,
+    typeCast: true
+  },
+  define: {
+    timestamps: true
+  }
 };
 const production = {
   username: env.MYSQL_USER,
@@ -14,6 +22,14 @@ const production = {
   database: env.MYSQL_DB,
   host: env.MYSQL_HOST,
   dialect: "mysql",
+  timezone: "+09:00",
+  dialectOptions: {
+    dateStrings: true,
+    typeCast: true
+  },
+  define: {
+    timestamps: true
+  }
 };
 const test = {
   username: env.MYSQL_USER,
@@ -21,6 +37,14 @@ const test = {
   database: env.MYSQL_DB,
   host: env.MYSQL_HOST,
   dialect: "mysql",
+  timezone: "+09:00",
+  dialectOptions: {
+    dateStrings: true,
+    typeCast: true
+  },
+  define: {
+    timestamps: true
+  }
 };
 
 

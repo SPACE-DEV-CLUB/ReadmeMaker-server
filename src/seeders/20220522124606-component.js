@@ -2,11 +2,10 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert(
+    const componentId = await queryInterface.bulkInsert(
       "components",
       [
         {
-          id: 3,
           title: "백준 티어_1",
           author: "mori8",
           description: "만약 로드된 후 애니메이션을 다시 보고싶으시면 ctrl + shift + R 을 눌러서 강력 새로고침을 하시면 다시 보실 수 있습니다!",
@@ -16,33 +15,59 @@ module.exports = {
           default_value: "jae04099",
           link: "https://github.com/mazassumnida/mazassumnida/blob/master/README.md",
           like: 5,
-          new: 2,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        }
+      ],
+      {returning: ["id"]}
+    );
+    await queryInterface.bulkInsert(
+      "component_tags",
+      [
+        {
+          title: "New",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          component_id: componentId
+        },
+        {
+          title: "Rank",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          component_id: componentId
+        },
+        {
+          title: "Typo",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          component_id: componentId
+        },
+        {
+          title: "Graph",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          component_id: componentId
+        },
+        {
+          title: "Badge",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          component_id: componentId
+        },
+      ]
+    );
+    await queryInterface.bulkInsert(
+      "Function_Tag",
+      [
+        {
+          component_id: 1,
+          component_tags_id: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         }
       ]
     )
   },
-  // up: async (queryInterface, Sequelize) => {
-  //   await queryInterface.bulkInsert(
-  //     "component_tags",
-  //     [
-  //       {
-  //         title: "New"
-  //       },
-  //       {
-  //         title: "Rank"
-  //       },
-  //       {
-  //         title: "Typo"
-  //       },
-  //       {
-  //         title: "Graph"
-  //       },
-  //       {
-  //         title: "Badge"
-  //       },
-  //     ]
-  //   )
-  // },
   // up: async (queryInterface, Sequelize) => {
   //   await queryInterface.bulkInsert(
   //     "templates",
@@ -54,6 +79,8 @@ module.exports = {
   //         image: "https://user-images.githubusercontent.com/47337588/171867122-83bbada0-d715-481d-9e5e-4d5fd6d4c8a4.png",
   //         link: "https://github.com/jae04099",
   //         like: 2,
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       }
   //     ]
   //   )
@@ -63,52 +90,84 @@ module.exports = {
   //     "template_tags",
   //     [
   //       {
-  //         title: "AllGithub"
+  //         title: "AllGithub",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Actions"
+  //         title: "Actions",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Game Mode"
+  //         title: "Game Mode",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Code Mode"
+  //         title: "Code Mode",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Dynamic"
+  //         title: "Dynamic",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Realtime"
+  //         title: "Realtime",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Descriptive"
+  //         title: "Descriptive",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Simple but Innovative Ones"
+  //         title: "Simple but Innovative Ones",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Anime"
+  //         title: "Anime",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Minimalistic"
+  //         title: "Minimalistic",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "GIFS"
+  //         title: "GIFS",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Just Images"
+  //         title: "Just Images",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Badges"
+  //         title: "Badges",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Fancy Fonts"
+  //         title: "Fancy Fonts",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Icons"
+  //         title: "Icons",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //       {
-  //         title: "Retro"
+  //         title: "Retro",
+  //         createdAt: new Date(),
+  //         updatedAt: new Date(),
   //       },
   //     ]
   //   )
@@ -116,5 +175,6 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.bulkDelete("components", null, {});
+    await queryInterface.bulkDelete("component_tags", null, {});
   },
 };

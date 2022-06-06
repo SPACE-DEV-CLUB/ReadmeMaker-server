@@ -21,8 +21,7 @@ module.exports = class ComponentTags extends Model {
       sequelize,
     })
   }
-  // static associate(db) {
-  //   db.ComponentTags.belongsTo(db.Component);
-  //   db.Component.hasMany(db.ComponentTags);
-  // }
+  static associate(db) {
+    db.ComponentTags.belongsToMany(db.Component, { through: 'Function_Tag', foreignKey: "component_tags_id" });
+  }
 }
