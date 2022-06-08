@@ -7,6 +7,9 @@ router.get('/', (req, res, next) => {
         // where: {
         //     deletedAt: null
         // }
+        include: [{
+            model: models.ComponentTags
+        }]
     })
         .then((component) => {
             res.status(200).json(component);

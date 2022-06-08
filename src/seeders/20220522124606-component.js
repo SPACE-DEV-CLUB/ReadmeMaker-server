@@ -6,7 +6,7 @@ module.exports = {
       "components",
       [
         {
-          title: "백준 티어_1",
+          title: "백준 티어_2",
           author: "mori8",
           description: "만약 로드된 후 애니메이션을 다시 보고싶으시면 ctrl + shift + R 을 눌러서 강력 새로고침을 하시면 다시 보실 수 있습니다!",
           image: "https://i.ibb.co/LZGnH5R/2020-08-26-2-02-58.png",
@@ -17,54 +17,88 @@ module.exports = {
           like: 5,
           createdAt: new Date(),
           updatedAt: new Date(),
-        }
+        },
+        {
+          title: "백준 티어_3",
+          author: "mori8",
+          description: "만약 로드된 후 애니메이션을 다시 보고싶으시면 ctrl + shift + R 을 눌러서 강력 새로고침을 하시면 다시 보실 수 있습니다!",
+          image: "https://i.ibb.co/LZGnH5R/2020-08-26-2-02-58.png",
+          code: "[![Solved.ac프로필](http://mazassumnida.wtf/api/generate_badge?boj=백준아이디)](https://solved.ac/백준아이디)",
+          variable: "백준아이디",
+          default_value: "jae04099",
+          link: "https://github.com/mazassumnida/mazassumnida/blob/master/README.md",
+          like: 5,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          title: "백준 티어_4",
+          author: "mori8",
+          description: "만약 로드된 후 애니메이션을 다시 보고싶으시면 ctrl + shift + R 을 눌러서 강력 새로고침을 하시면 다시 보실 수 있습니다!",
+          image: "https://i.ibb.co/LZGnH5R/2020-08-26-2-02-58.png",
+          code: "[![Solved.ac프로필](http://mazassumnida.wtf/api/generate_badge?boj=백준아이디)](https://solved.ac/백준아이디)",
+          variable: "백준아이디",
+          default_value: "jae04099",
+          link: "https://github.com/mazassumnida/mazassumnida/blob/master/README.md",
+          like: 5,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
-      {returning: ["id"]}
+      // {returning: ["id"]}
     );
-    await queryInterface.bulkInsert(
-      "component_tags",
-      [
-        {
-          title: "New",
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          component_id: componentId
-        },
-        {
-          title: "Rank",
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          component_id: componentId
-        },
-        {
-          title: "Typo",
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          component_id: componentId
-        },
-        {
-          title: "Graph",
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          component_id: componentId
-        },
-        {
-          title: "Badge",
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          component_id: componentId
-        },
-      ]
-    );
+    // await queryInterface.bulkInsert(
+    //   "component_tags",
+    //   [
+    //     {
+    //       title: "New",
+    //       createdAt: new Date(),
+    //       updatedAt: new Date(),
+    //       // component_id: componentId
+    //     },
+    //     {
+    //       title: "Rank",
+    //       createdAt: new Date(),
+    //       updatedAt: new Date(),
+    //     },
+    //     {
+    //       title: "Typo",
+    //       createdAt: new Date(),
+    //       updatedAt: new Date(),
+    //     },
+    //     {
+    //       title: "Graph",
+    //       createdAt: new Date(),
+    //       updatedAt: new Date(),
+    //     },
+    //     {
+    //       title: "Badge",
+    //       createdAt: new Date(),
+    //       updatedAt: new Date(),
+    //     },
+    //   ]
+    // );
     await queryInterface.bulkInsert(
       "Function_Tag",
       [
         {
-          component_id: 1,
+          component_id: 2,
           component_tags_id: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
-        }
+        },
+        {
+          component_id: 3,
+          component_tags_id: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          component_id: 3,
+          component_tags_id: 2,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ]
     )
   },
