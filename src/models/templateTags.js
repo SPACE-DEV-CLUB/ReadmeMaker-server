@@ -14,17 +14,17 @@ module.exports = class TemplateTags extends Model {
                     notEmpty: true,
                 },
             },
-            createdAt: {
-                allowNull: false,
-                type: Sequelize.DATE,
-                defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
-            },
-            updatedAt: {
-                allowNull: false,
-                type: Sequelize.DATE,
-                defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
-                onUpdate: Sequelize.literal('CURRENT_TIMESTAMP'),
-            }
+            // createdAt: {
+            //     allowNull: false,
+            //     type: Sequelize.DATE,
+            //     defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+            // },
+            // updatedAt: {
+            //     allowNull: false,
+            //     type: Sequelize.DATE,
+            //     defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+            //     onUpdate: Sequelize.literal('CURRENT_TIMESTAMP'),
+            // }
         }, {
             modelName: 'TemplateTag',
             tableName: 'template_tags',

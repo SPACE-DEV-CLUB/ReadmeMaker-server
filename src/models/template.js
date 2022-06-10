@@ -29,12 +29,6 @@ module.exports = class Template extends Model {
       link: {
         type: DataTypes.STRING,
       },
-      related_comp: {
-        type: DataTypes.JSON,
-      },
-      tags: {
-        type: DataTypes.JSON,
-      },
       like: {
         type: DataTypes.INTEGER,
       }

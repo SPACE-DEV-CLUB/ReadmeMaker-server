@@ -35,7 +35,7 @@ module.exports = class Component extends Model {
       variable: {
         type: DataTypes.STRING,
       },
-      default_value: {
+      type: {
         type: DataTypes.STRING,
       },
       link: {
@@ -44,6 +44,9 @@ module.exports = class Component extends Model {
       like: {
         type: DataTypes.INTEGER,
       },
+      related_template: {
+        type: DataTypes.INTEGER
+      }
     }, {
       modelName: 'Component',
       tableName: 'components',

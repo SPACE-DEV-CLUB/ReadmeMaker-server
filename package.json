@@ -15,7 +15,7 @@
     "mysql2": "^2.3.3",
     "node-fetch": "^3.2.4",
     "path": "^0.12.7",
-    "sequelize": "^6.19.0",
+    "sequelize": "5.22.3",
     "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
