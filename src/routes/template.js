@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const models = require('../models/index');
+const templateController = require('../controller/template.controller');
 
 router.get('/', (req, res, next) => {
     models.Template.findAll({
@@ -15,5 +16,8 @@ router.get('/', (req, res, next) => {
             res.status(200).json(template);
         });
 });
+
+router.put('/update/:id', templateController.update);
+
 
 module.exports = router;
