@@ -18,22 +18,8 @@ router.get("/", (req, res, next) => {
   });
 });
 
-router.get("/:id", (req, res, next) => {
-  models.Component.findAll({
-    // where: {
-    //     deletedAt: null
-    // }
-    include: [
-      {
-        model: models.ComponentTags,
-      },
-    ],
-    where: { related_template: req.params.id },
-  }).then((component) => {
-    res.status(200).json(component);
-  });
-});
-
 router.put("/update/:id", templateController.update);
+
+router.get("/:id", templateController.relation);
 
 module.exports = router;
