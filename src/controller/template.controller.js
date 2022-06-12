@@ -12,6 +12,9 @@ exports.all = async (req, res) => {
         {
           model: TemplateTags,
         },
+        {
+          model: Component,
+        },
       ],
     });
     res.status(200).json(template);
@@ -41,7 +44,7 @@ exports.relation = async (req, res) => {
           model: ComponentTags,
         },
       ],
-      where: { related_template: id },
+      where: { TemplateId: id },
     });
     res.status(200).json(component);
   } catch (err) {
