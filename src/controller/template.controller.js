@@ -5,6 +5,21 @@ const ComponentTags = db.ComponentTags;
 const TemplateTags = db.TemplateTags;
 const Op = db.sequelize.Op;
 
+exports.all = async (req, res) => {
+  try {
+    const template = await Template.findAll({
+      include: [
+        {
+          model: TemplateTags,
+        },
+      ],
+    });
+    res.status(200).json(template);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 exports.template = async (req, res) => {
   try {
     const id = await req.params.id;

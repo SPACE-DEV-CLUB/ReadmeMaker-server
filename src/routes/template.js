@@ -3,6 +3,8 @@ const router = express.Router();
 const models = require("../models/index");
 const templateController = require("../controller/template.controller");
 
+router.get("/", templateController.all);
+
 router.get("/:id", templateController.template);
 
 router.get("/component/:id", templateController.relation);
