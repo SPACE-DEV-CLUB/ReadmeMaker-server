@@ -34,12 +34,12 @@ exports.relation = async (req, res) => {
   }
 };
 
-exports.update = (req, res) => {
-    try{
-        const id = await req.params.id;
-        await Template.increment({ like: 1 }, { where: { id } });
-        res.send({ res: true });
-    } catch(err){
-        console.error(err);
-    }
+exports.update = async (req, res) => {
+  try {
+    const id = await req.params.id;
+    await Template.increment({ like: 1 }, { where: { id } });
+    res.send({ res: true });
+  } catch (err) {
+    console.error(err);
+  }
 };
