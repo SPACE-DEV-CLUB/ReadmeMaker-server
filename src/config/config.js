@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 const env = process.env;
 
 const development = {
@@ -10,11 +10,11 @@ const development = {
   timezone: "+09:00",
   dialectOptions: {
     dateStrings: true,
-    typeCast: true
+    typeCast: true,
   },
   define: {
-    timestamps: true
-  }
+    timestamps: true,
+  },
 };
 const production = {
   username: env.MYSQL_USER,
@@ -25,11 +25,11 @@ const production = {
   timezone: "+09:00",
   dialectOptions: {
     dateStrings: true,
-    typeCast: true
+    typeCast: true,
   },
   define: {
-    timestamps: true
-  }
+    timestamps: true,
+  },
 };
 const test = {
   username: env.MYSQL_USER,
@@ -40,13 +40,11 @@ const test = {
   timezone: "+09:00",
   dialectOptions: {
     dateStrings: true,
-    typeCast: true
+    typeCast: true,
   },
   define: {
-    timestamps: true
-  }
+    timestamps: true,
+  },
 };
-
-
 
 module.exports = { development, production, test };
