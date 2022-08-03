@@ -403,7 +403,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "3D illustration_2",
@@ -421,7 +420,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "3D illustration_3",
@@ -439,7 +437,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "3D illustration_4",
@@ -456,7 +453,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "3D illustration_5",
@@ -476,7 +472,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "Moving Typo Title",
@@ -492,7 +487,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "capsule render_wave",
@@ -506,7 +500,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "capsule render_egg",
@@ -520,7 +513,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "capsule render_shark",
@@ -534,7 +526,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "capsule render_slice",
@@ -548,7 +539,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "capsule render_rect",
@@ -562,7 +552,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "capsule render_soft",
@@ -576,7 +565,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "capsule render_rounded",
@@ -590,7 +578,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "capsule render_cylinder",
@@ -604,7 +591,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "capsule render_waving",
@@ -618,7 +604,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "capsule render_transparent",
@@ -632,7 +617,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "HITS_flat",
@@ -648,7 +632,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
       {
         title: "HITS_round",
@@ -664,7 +647,6 @@ module.exports = {
         like: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-        TemplateId: 1,
       },
     ]);
     await queryInterface.bulkInsert("component_tags", [
